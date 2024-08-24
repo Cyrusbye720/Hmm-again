@@ -1,0 +1,76 @@
+body {
+    font-family: 'Cursive', sans-serif;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+#intro {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#drawing-area {
+    margin: 50px 0;
+}
+
+canvas {
+    border: 2px solid #fff;
+    background-color: #f0e5cf;
+    cursor: crosshair;
+}
+
+#reveal-message {
+    margin-top: 50px;
+}
+
+#hidden-message {
+    display: none;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+#reveal-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #e91e63;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#reveal-btn:hover {
+    background-color: #d81b60;
+}
+
+/* Floating Hearts */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hearts.png') repeat;
+    z-index: -1;
+    opacity: 0.5;
+    animation: floatHearts 15s linear infinite;
+}
+
+@keyframes floatHearts {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
